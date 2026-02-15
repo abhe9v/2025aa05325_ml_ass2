@@ -5,17 +5,17 @@ Author: Abhinav
 
 import pandas as pd
 from typing import List, Dict
-from com.abhi.ml.assignment.data.loader import DataLoader
-from com.abhi.ml.assignment.data.preprocessor import DataPreprocessor
-from com.abhi.ml.assignment.models.logistic_model import LogisticRegressionModel
-from com.abhi.ml.assignment.models.decision_tree_model import DecisionTreeModel
-from com.abhi.ml.assignment.models.knn_model import KNNModel
-from com.abhi.ml.assignment.models.naive_bayes_model import NaiveBayesModel
-from com.abhi.ml.assignment.models.random_forest_model import RandomForestModel
-from com.abhi.ml.assignment.models.xgboost_model import XGBoostModel
-from com.abhi.ml.assignment.utils.file_handler import FileHandler
-from com.abhi.ml.assignment.utils.logger import get_logger
-from com.abhi.ml.assignment.config.settings import (
+from com.abhi.ml.src.data.loader import DataLoader
+from com.abhi.ml.src.data.preprocessor import DataPreprocessor
+from com.abhi.ml.src.models.logistic_model import LogisticRegressionModel
+from com.abhi.ml.src.models.decision_tree_model import DecisionTreeModel
+from com.abhi.ml.src.models.knn_model import KNNModel
+from com.abhi.ml.src.models.naive_bayes_model import NaiveBayesModel
+from com.abhi.ml.src.models.random_forest_model import RandomForestModel
+from com.abhi.ml.src.models.xgboost_model import XGBoostModel
+from com.abhi.ml.src.utils.file_handler import FileHandler
+from com.abhi.ml.src.utils.logger import get_logger
+from com.abhi.ml.src.config.settings import (
     TEST_DATA_FILE, RESULTS_FILE, SCALER_FILE, DATASET_INFO_FILE
 )
 

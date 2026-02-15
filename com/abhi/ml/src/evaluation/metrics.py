@@ -48,6 +48,8 @@ class ModelEvaluator:
         print(f"\n{model_name} Performance:")
         print("-" * 50)
         for metric, value in metrics.items():
+            if metric == 'Model':
+                continue
             print(f"  {metric:12s}: {value:.4f}")
 
     @staticmethod
