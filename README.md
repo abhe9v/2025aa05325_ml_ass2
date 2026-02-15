@@ -63,7 +63,7 @@ Each model is evaluated using **6 comprehensive metrics**:
 
 ### Screenshots
 
-![Screenshot.png](Screenshot.png)
+![Screenshot.png](screenshots/LabExecution.png)
 
 ---
 
