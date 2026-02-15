@@ -63,7 +63,21 @@ Each model is evaluated using **6 comprehensive metrics**:
 
 ### Screenshots
 
-![Screenshot.png](screenshots/LabExecution.png)
+**Screenshot 1:** Training script execution showing all 6 models trained successfully with performance metrics.
+
+![BITS Virtual Lab - Training Execution](screenshots/LabExecution.png)
+
+**Screenshot 2:** Main dashboard with model selection and file upload.
+
+![Streamlit Dashboard](screenshots/uploadFiles.png)
+
+**Screenshot 3:** Prediction results with metrics dashboard.
+
+![Prediction Results](screenshots/Metrics.png)
+
+**Screenshot 4:** Model comparison chart.
+
+![Model Comparison](screenshots/ModelComparison.png)
 
 ---
 
