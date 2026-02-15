@@ -127,6 +127,10 @@ st.markdown("""
 
 # Sidebar
 with st.sidebar:
+    # BITS Pilani Logo
+    st.image("https://upload.wikimedia.org/wikipedia/en/d/d3/BITS_Pilani-Logo.svg", width=150)
+    st.markdown("---")
+
     st.markdown("### ⚙️ Configuration")
 
     # Model selection
