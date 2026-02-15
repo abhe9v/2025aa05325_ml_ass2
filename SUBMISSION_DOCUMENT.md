@@ -35,537 +35,303 @@ fontsize: 11pt
 
 \end{titlepage}
 
+
+# GitHub Repository Link
+
+**Repository URL:** https://github.com/abhe9v/2025aa05325_ml_ass2
+
+## Repository Contents:
+
+- ✓ Complete source code
+- ✓ requirements.txt
+- ✓ Clear README.md
+- ✓ All 6 model implementations
+- ✓ Trained model files (.pkl)
+- ✓ Test data (CSV)
+- ✓ Streamlit application (app.py)
+
 \newpage
 
-\tableofcontents
+# Live Streamlit App Link
+
+**Streamlit App URL:** https://2025aa05325mlass2.streamlit.app
+
+## Application Status:
+
+- ✓ Deployed on Streamlit Community Cloud
+- ✓ Interactive frontend available
+- ✓ Opens without errors
+- ✓ All required features implemented
+
+## Streamlit App Features:
+
+1. ✓ **Dataset upload option (CSV)** - Test data can be uploaded
+2. ✓ **Model selection dropdown** - 6 models available
+3. ✓ **Display of evaluation metrics** - Accuracy, AUC, Precision, Recall, F1, MCC
+4. ✓ **Confusion matrix and classification report** - Visual heatmap and detailed report
 
 \newpage
 
-# Project Overview
-
-## Objective
-Develop a professional machine learning framework that implements and compares **6 different classification algorithms** on any binary/multi-class dataset, providing automated model training, comprehensive evaluation metrics, and an interactive web interface.
-
-## Key Features
-- ✅ **6 ML Algorithms:** Logistic Regression, Decision Tree, kNN, Naive Bayes, Random Forest, XGBoost
-- ✅ **6 Evaluation Metrics:** Accuracy, AUC-ROC, Precision, Recall, F1-Score, MCC
-- ✅ **Interactive Web UI:** Real-time predictions with visualizations
-- ✅ **Flexible Framework:** Works with any numeric dataset
-- ✅ **Production-Ready:** Professional code structure with proper documentation
-
-## Technologies Used
-- **Language:** Python 3.9+
-- **ML Library:** scikit-learn
-- **Web Framework:** Streamlit
-- **Visualization:** Matplotlib, Seaborn
-- **Data Processing:** Pandas, NumPy
-
----
-
-# GitHub Repository
-
-## Repository Details
-- **Repository Name:** breast-cancer-ml-classification
-- **URL:** https://github.com/abhe9v/2025aa05325_ml_ass2.git
-- **Visibility:** Public
-- **Branch:** main
-
-## Repository Contents
-```
-breast-cancer-classification/
-├── com/abhi/ml/src/           # Core application package
-│   ├── config/                # Configuration management
-│   ├── data/                  # Data loading & preprocessing
-│   ├── models/                # 6 ML model implementations
-│   ├── evaluation/            # Metrics calculation
-│   ├── utils/                 # Utilities (logging, file I/O)
-│   └── main.py                # Training pipeline
-├── resources/
-│   ├── data/                  # Generated datasets
-│   └── models/                # Trained models (.pkl files)
-├── app.py                     # Streamlit web application
-├── requirements.txt           # Dependencies
-├── README.md                  # Comprehensive documentation
-└── .gitignore                 # Git ignore rules
-```
-
-## Key Files Included
-✅ All source code files  
-✅ Trained model artifacts (.pkl files)  
-✅ Test data (test_data.csv)  
-✅ Requirements.txt with dependencies  
-✅ Comprehensive README.md  
-✅ Professional package structure  
-
----
-
-# Streamlit Application
-
-## Live Application
-- **Streamlit Cloud URL:** https://2025aa05325mlass2.streamlit.app
-- **Status:** Deployed and Active
-- **Access:** Public (no authentication required)
-
-## Application Features
-
-### Core Functionality
-1. **Model Selection**
-   - Dropdown menu with 6 algorithms
-   - Model descriptions and characteristics
-   - Real-time switching between models
-
-2. **Data Upload**
-   - CSV file upload support
-   - Automatic feature detection
-   - Optional target column for evaluation
-
-3. **Predictions**
-   - Real-time classification
-   - Confidence scores for each prediction
-   - Batch processing support
-
-4. **Visualizations**
-   - Confusion matrix heatmaps
-   - Performance comparison charts
-   - Metric dashboards
-
-5. **Evaluation Metrics** (when labels provided)
-   - Accuracy, AUC-ROC, Precision
-   - Recall, F1-Score, MCC
-   - Classification report
-
-6. **Export Functionality**
-   - Download predictions as CSV
-   - Include confidence scores
-   - Optional actual vs predicted comparison
-
-## User Interface Sections
-- **Sidebar:** Model selection, file upload, framework info
-- **Main Panel:** Predictions, metrics, visualizations
-- **Comparison Panel:** Model performance comparison table and charts
-
----
-
-# Dataset Information
-
-## Demonstration Dataset
-**Name:** Breast Cancer Wisconsin (Diagnostic) Dataset  
-**Source:** UCI ML Repository (via scikit-learn)
-
-| Attribute | Value |
-|-----------|-------|
-| Total Samples | 569 |
-| Features | 30 (all numeric) |
-| Classes | 2 (Binary) |
-| - Class 0 (Malignant) | 212 samples (37.3%) |
-| - Class 1 (Benign) | 357 samples (62.7%) |
-| Missing Values | None |
-| Train/Test Split | 455 / 114 (80/20) |
-| Stratified Sampling | Yes |
-
-## Dataset Characteristics
-- **Feature Types:** All numeric (continuous)
-- **Scaling Applied:** StandardScaler (mean=0, std=1)
-- **Class Balance:** Slightly imbalanced (handled via stratified split)
-- **Quality:** No missing values, clean data
-
-## Framework Flexibility
-**Important Note:** While demonstrated on the Breast Cancer dataset, the framework is designed to work with **any numeric classification dataset** meeting these requirements:
-- CSV format
-- Numeric features only
-- Binary or multi-class classification
-- Optional target column for evaluation
-- Recommended: ≥500 samples, ≥12 features
-
----
-
-# Model Implementation
-
-## Logistic Regression
-**Type:** Linear Classifier  
-**Configuration:**
-- Solver: lbfgs
-- Max Iterations: 10,000
-- Regularization: L2
-- Random State: 42
-
-**Strengths:**
-- Fast training and inference
-- Highly interpretable
-- Probabilistic predictions
-- Works well with linearly separable data
-
-## Decision Tree
-**Type:** Tree-based Classifier  
-**Configuration:**
-- Criterion: Gini impurity
-- Max Depth: None (unlimited)
-- Random State: 42
-
-**Strengths:**
-- Non-linear decision boundaries
-- Highly interpretable
-- No feature scaling required
-- Handles mixed data types
-
-## K-Nearest Neighbors (kNN)
-**Type:** Instance-based Classifier  
-**Configuration:**
-- k (neighbors): 5
-- Weights: Uniform
-- Algorithm: Auto
-
-**Strengths:**
-- No training phase
-- Non-parametric
-- Flexible decision boundaries
-- Good for small datasets
-
-## Naive Bayes
-**Type:** Probabilistic Classifier  
-**Configuration:**
-- Distribution: Gaussian
-- Variance Smoothing: 1e-9
-
-**Strengths:**
-- Fast training and prediction
-- Works with small datasets
-- Probabilistic interpretation
-- Handles high dimensions well
-
-## Random Forest
-**Type:** Ensemble (Bagging)  
-**Configuration:**
-- Estimators: 100 trees
-- Criterion: Gini
-- Random State: 42
-
-**Strengths:**
-- Reduces overfitting
-- Handles non-linearity
-- Feature importance
-- Robust to noise
-
-## XGBoost (Gradient Boosting)
-**Type:** Ensemble (Boosting)  
-**Configuration:**
-- Estimators: 100
-- Learning Rate: 0.1
-- Max Depth: 3
-- Random State: 42
-
-**Strengths:**
-- State-of-the-art performance
-- Handles imbalanced data
-- Built-in regularization
-- Sequential error correction
-
----
-
-# Performance Results
-
-## Complete Results Table
-
-| Model | Accuracy | AUC | Precision | Recall | F1-Score | MCC |
-|-------|----------|-----|-----------|--------|----------|-----|
-| **Logistic Regression** | **0.9825** | **0.9954** | **0.9861** | **0.9861** | **0.9861** | **0.9623** |
-| Random Forest | 0.9561 | 0.9939 | 0.9589 | 0.9722 | 0.9655 | 0.9054 |
-| XGBoost | 0.9561 | 0.9907 | 0.9467 | **0.9861** | 0.9660 | 0.9058 |
-| kNN | 0.9561 | 0.9788 | 0.9589 | 0.9722 | 0.9655 | 0.9054 |
-| Naive Bayes | 0.9298 | 0.9868 | 0.9444 | 0.9444 | 0.9444 | 0.8492 |
-| Decision Tree | 0.9123 | 0.9157 | 0.9559 | 0.9028 | 0.9286 | 0.8174 |
-
-## Detailed Analysis
-
-### Best Overall Performance
-**Winner: Logistic Regression**
-- Accuracy: 98.25% (112/114 correct predictions)
-- Only 2 misclassifications on test set
-- Excellent balance across all metrics
-- Highest AUC (0.9954) indicates superior ranking ability
-
-### Best for Critical Applications
-**Winner: XGBoost**
-- Highest Recall: 98.61% (only 1 false negative)
-- Critical for medical diagnosis where missing a positive case is dangerous
-- Strong ensemble performance with boosting
-
-### Most Consistent
-**Winner: Random Forest**
-- Tied accuracy with XGBoost and kNN (95.61%)
-- Very high AUC (0.9939)
-- Robust through ensemble averaging
-- Low variance predictions
-
-### Fastest
-**Winner: kNN**
-- No training phase required
-- Instant model availability
-- Good for rapid prototyping
-
----
-
-# Key Observations
-
-## Model Performance Insights
-
-1. **Linear Models Excel on This Data**
-   - Logistic Regression achieved the best overall performance
-   - Indicates that the feature space is largely linearly separable
-   - Confirms proper feature engineering and scaling
-
-2. **Ensemble Methods Provide Robustness**
-   - Random Forest and XGBoost both achieved 95.61% accuracy
-   - Ensemble techniques reduce overfitting
-   - More stable predictions across different data splits
-
-3. **Tree-Based Methods Show Limitations**
-   - Single Decision Tree: 91.23% accuracy
-   - Prone to overfitting without ensemble
-   - Performance significantly improves with ensembling
-
-4. **Feature Scaling Impact**
-   - Critical for distance-based (kNN) and linear models (Logistic Regression)
-   - StandardScaler preprocessing improved convergence
-   - Less important for tree-based methods
-
-## Metric-Specific Insights
-
-**Accuracy (Overall Correctness)**
-- Range: 91.23% to 98.25%
-- All models exceed 90% threshold
-- Logistic Regression: 98.25% (best)
-
-**AUC-ROC (Ranking Quality)**
-- Range: 0.9157 to 0.9954
-- All models show excellent discrimination
-- Logistic Regression: 0.9954 (best)
-
-**Precision (Positive Predictive Value)**
-- Range: 0.9444 to 0.9861
-- High precision across all models
-- Important for minimizing false positives
-
-**Recall (Sensitivity)**
-- Range: 0.9028 to 0.9861
-- Critical metric for medical diagnosis
-- XGBoost & Logistic Regression tied at 0.9861
-
-**F1-Score (Balanced Measure)**
-- Range: 0.9286 to 0.9861
-- Good balance between precision and recall
-- Logistic Regression: 0.9861 (best)
-
-**MCC (Correlation Coefficient)**
-- Range: 0.8174 to 0.9623
-- Accounts for class imbalance
-- Most reliable single metric
-- Logistic Regression: 0.9623 (best)
-
-## Practical Implications
-
-**For Production Deployment:**
-- **Logistic Regression** recommended for:
-  - Best overall performance
-  - Fast inference
-  - Easy interpretability
-  - Lower computational requirements
-
-**For High-Stakes Applications:**
-- **XGBoost** recommended for:
-  - Highest recall (minimize false negatives)
-  - Robust ensemble predictions
-  - Handle edge cases better
-
-**For Rapid Prototyping:**
-- **kNN** recommended for:
-  - No training time
-  - Quick experimentation
-  - Baseline establishment
-
----
-
-# Technical Architecture
-
-## System Design
-
-**Architecture Pattern:** Layered Architecture
-```
-Presentation Layer (Streamlit UI)
-         ↓
-Application Layer (main.py orchestrator)
-         ↓
-Business Logic Layer (models/, evaluation/)
-         ↓
-Data Access Layer (data/, utils/)
-         ↓
-Infrastructure Layer (scikit-learn, pandas, numpy)
-```
-
-## Code Organization
-
-**Package Structure:**
-- `config/` - Centralized configuration
-- `data/` - Data loading and preprocessing
-- `models/` - ML model implementations (6 models)
-- `evaluation/` - Metrics calculation and reporting
-- `utils/` - File I/O, logging utilities
-
-**Design Patterns Used:**
-- Abstract Base Class (base_model.py)
-- Strategy Pattern (interchangeable models)
-- Singleton Pattern (configuration)
-- Factory Pattern (model creation)
-
-## Key Technologies
-
-| Component | Technology | Purpose |
-|-----------|------------|---------|
-| ML Framework | scikit-learn | Model implementation |
-| Data Processing | Pandas, NumPy | Data manipulation |
-| Web Framework | Streamlit | User interface |
-| Visualization | Matplotlib, Seaborn | Charts and plots |
-| Model Persistence | Pickle | Save/load models |
-| Version Control | Git/GitHub | Code management |
-
----
-
-# Installation & Usage
-
-## Setup Instructions
-```bash
-# Clone repository
-git clone https://github.com/YOUR_USERNAME/breast-cancer-ml-classification.git
-cd breast-cancer-ml-classification
-
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-## Training Models
-```bash
-# Run training pipeline
-python -m com.abhi.ml.src.main
-```
-
-**Expected Output:**
-- Training progress for all 6 models
-- Performance metrics table
-- Model files saved to `resources/models/`
-- Test data saved to `resources/data/`
-
-## Running Web Application
-```bash
-# Launch Streamlit app
-streamlit run app.py
-```
-
-**Access:** Browser opens automatically at `http://localhost:8501`
-
-## Using Custom Dataset
-
-1. Prepare CSV with numeric features
-2. Optional: Include 'target' column
-3. Upload via Streamlit UI
-4. Select model and run predictions
-5. Download results
-
----
-
-# Screenshots
-
-## BITS Virtual Lab Execution
-
-**Screenshot:** Training script execution showing all 6 models trained successfully with performance metrics.
+# Screenshot - BITS Virtual Lab Execution
 
 ![BITS Virtual Lab - Training Execution](screenshots/LabExecution.png)
 
-## Streamlit Application
-
-**Screenshot 1:** Main dashboard with model selection and file upload.
-
 ![Streamlit Dashboard](screenshots/uploadFiles.png)
-
-**Screenshot 2:** Prediction results with metrics dashboard.
 
 ![Prediction Results](screenshots/Metrics.png)
 
-**Screenshot 3:** Model comparison chart.
-
 ![Model Comparison](screenshots/ModelComparison.png)
 
----
 
-# Compliance Checklist
+\newpage
 
-## Assignment Requirements
+# README Content
 
-| Requirement | Status | Details |
-|-------------|--------|---------|
-| **6 Classification Models** | ✅ | Logistic Regression, Decision Tree, kNN, Naive Bayes, Random Forest, XGBoost |
-| **6 Evaluation Metrics** | ✅ | Accuracy, AUC-ROC, Precision, Recall, F1-Score, MCC |
-| **Dataset: ≥500 samples** | ✅ | 569 samples (569 ≥ 500) |
-| **Dataset: ≥12 features** | ✅ | 30 features (30 ≥ 12) |
-| **Binary/Multi-class** | ✅ | Binary classification (2 classes) |
-| **GitHub Repository** | ✅ | Public repo with complete code |
-| **Streamlit Deployment** | ✅ | Live app on Streamlit Cloud |
-| **BITS Virtual Lab** | ✅ | Screenshot of execution included |
-| **Documentation** | ✅ | Comprehensive README.md |
-| **Code Quality** | ✅ | Professional structure, comments, logging |
+## Problem Statement
 
-## Deliverables Submitted
+Develop a comprehensive machine learning classification framework that compares multiple algorithms on a given dataset. The framework should:
 
-✅ **GitHub Repository URL**  
-✅ **Streamlit Application URL**  
-✅ **BITS Virtual Lab Screenshot**  
-✅ **PDF Document** (This file)  
+- Train and evaluate 6 different classification models
+- Calculate 6 evaluation metrics for each model
+- Provide an interactive web interface for predictions
+- Work with any numeric classification dataset
+- Deploy as a production-ready application
 
-## Code Quality Metrics
+This assignment demonstrates the complete ML workflow: data processing, model training, evaluation, web application development, and cloud deployment.
 
-- **Lines of Code:** ~1,500
-- **Files:** 15+ Python files
-- **Documentation:** Comprehensive README
-- **Comments:** Inline documentation
-- **Logging:** Professional logging throughout
-- **Error Handling:** Try-catch blocks
-- **Type Hints:** Used where appropriate
+\newpage
 
----
+## Dataset Description
 
-# Conclusion
+**Dataset Name:** Breast Cancer Wisconsin (Diagnostic) Dataset
 
-This project successfully implements a professional multi-model classification framework that:
+**Source:** UCI Machine Learning Repository (via scikit-learn)
 
-1. **Meets all requirements:** 6 models, 6 metrics, dataset criteria, deployment
-2. **Exceeds expectations:** Professional code structure, comprehensive documentation
-3. **Demonstrates excellence:** 98.25% accuracy on test data
-4. **Shows versatility:** Framework works with any numeric dataset
-5. **Provides value:** Interactive UI for real-world usage
+**Problem Type:** Binary Classification
 
-The framework is production-ready, well-documented, and serves as a solid foundation for future machine learning projects.
+### Dataset Characteristics:
 
----
+| Attribute | Value |
+|-----------|-------|
+| **Total Samples** | 569 instances |
+| **Number of Features** | 30 features (all numeric) |
+| **Target Classes** | 2 classes (Binary classification) |
+| **Class 0 (Malignant)** | 212 samples (37.3%) |
+| **Class 1 (Benign)** | 357 samples (62.7%) |
+| **Missing Values** | None |
+| **Train/Test Split** | 455 / 114 (80/20 stratified) |
 
-# Appendix
+### Feature Description:
 
-## Dependencies (requirements.txt)
+The dataset contains 30 real-valued features computed from digitized images of fine needle aspirate (FNA) of breast mass. Features describe characteristics of cell nuclei present in the image:
+
+- **10 Mean values:** radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, fractal dimension
+- **10 Standard error values:** SE of the above measurements
+- **10 "Worst" values:** Mean of the three largest values of these features
+
+### Why This Dataset?
+
+- ✓ Meets minimum requirements (569 samples ≥ 500; 30 features ≥ 12)
+- ✓ Clean dataset with no missing values
+- ✓ Real-world medical application
+- ✓ Balanced classes suitable for binary classification
+- ✓ Well-studied benchmark dataset
+
+### Preprocessing Applied:
+
+1. **Feature Scaling:** StandardScaler (mean=0, std=1)
+2. **Train-Test Split:** 80/20 stratified split
+3. **Random State:** 42 (for reproducibility)
+
+\newpage
+
+## Models Used
+
+### Comparison Table - Evaluation Metrics for All 6 Models:
+
+| ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
+|---------------|----------|-----|-----------|--------|-------|-------|
+| **Logistic Regression** | 0.9825 | 0.9954 | 0.9861 | 0.9861 | 0.9861 | 0.9623 |
+| **Decision Tree** | 0.9123 | 0.9157 | 0.9559 | 0.9028 | 0.9286 | 0.8174 |
+| **kNN** | 0.9561 | 0.9788 | 0.9589 | 0.9722 | 0.9655 | 0.9054 |
+| **Naive Bayes** | 0.9298 | 0.9868 | 0.9444 | 0.9444 | 0.9444 | 0.8492 |
+| **Random Forest (Ensemble)** | 0.9561 | 0.9939 | 0.9589 | 0.9722 | 0.9655 | 0.9054 |
+| **XGBoost (Ensemble)** | 0.9561 | 0.9907 | 0.9467 | 0.9861 | 0.9660 | 0.9058 |
+
+\newpage
+
+### Observations on Model Performance:
+
+| ML Model Name | Observation about model performance |
+|---------------|-------------------------------------|
+| **Logistic Regression** | **Best overall performer** with 98.25% accuracy and only 2 misclassifications out of 114 test samples. Achieved highest AUC (0.9954) indicating excellent ranking ability. Perfect balance across all metrics (Precision, Recall, F1 all at 0.9861). The linear nature of the model worked exceptionally well, suggesting the feature space is largely linearly separable after proper scaling. Fast training and inference makes it ideal for production deployment. |
+| **Decision Tree** | **Lowest performer** with 91.23% accuracy and 10 misclassifications. Shows the classic overfitting problem of single decision trees - good training performance but lower generalization. AUC of 0.9157 is the lowest among all models. Performance significantly improves when used in ensemble methods (Random Forest). While highly interpretable, the model is prone to capturing noise in the training data. Not recommended for deployment without ensemble techniques. |
+| **kNN** | **Solid mid-tier performance** with 95.61% accuracy and 5 misclassifications. The instance-based learning approach worked well with proper feature scaling. No training phase required makes it excellent for rapid prototyping. AUC of 0.9788 shows good ranking capability. However, prediction time increases with dataset size (lazy learning). Memory-intensive as it stores all training samples. Best suited for smaller datasets or as a baseline model. |
+| **Naive Bayes** | **Good performance** with 92.98% accuracy despite strong independence assumptions. Surprisingly high AUC (0.9868) indicates excellent probabilistic predictions even with 8 misclassifications. The Gaussian assumption worked reasonably well for this dataset. Very fast training and prediction makes it suitable for real-time applications. Struggles with correlated features but the performance is acceptable. Good choice when training speed is critical. |
+| **Random Forest (Ensemble)** | **Strong ensemble performance** with 95.61% accuracy, matching kNN and XGBoost. The bagging technique effectively reduced the overfitting seen in single Decision Tree (+4.38% accuracy improvement). Very high AUC (0.9939) shows excellent discrimination. Robust to noise and outliers through averaging. Provides feature importance analysis. Slightly slower than Logistic Regression but more robust. Excellent choice for production where interpretability and robustness are needed. |
+| **XGBoost (Ensemble)** | **Best for critical applications** with 95.61% accuracy and **highest recall (0.9861)** - only 1 false negative (missed cancer case). Sequential boosting corrected errors from previous trees effectively. High AUC (0.9907) confirms strong performance. In medical diagnosis, minimizing false negatives is crucial, making XGBoost ideal despite slightly lower precision. Built-in regularization prevents overfitting. Best choice when the cost of false negatives is high. |
+
+\newpage
+
+## Key Findings Summary
+
+### Overall Best Model:
+**Logistic Regression** - Highest accuracy (98.25%), fastest inference, most balanced metrics
+
+### Best for Medical Diagnosis:
+**XGBoost** - Highest recall (98.61%), only 1 missed cancer case, critical for high-stakes applications
+
+### Most Robust:
+**Random Forest** - Ensemble averaging provides stability, handles outliers well
+
+### Fastest Training:
+**Naive Bayes** - Probabilistic model with minimal training time
+
+### Most Interpretable:
+**Decision Tree** - Visual decision rules, though requires ensemble for good performance
+
+### Ensemble Effect:
+Random Forest improved Decision Tree accuracy by **+4.38%** (from 91.23% to 95.61%)
+
+\newpage
+
+## Model Implementation Details
+
+### Logistic Regression
+- **Type:** Linear Classifier
+- **Configuration:** max_iter=10000, solver='lbfgs', C=1.0 (L2 regularization)
+- **Random State:** 42
+
+### Decision Tree
+- **Type:** Tree-based Classifier
+- **Configuration:** criterion='gini', max_depth=None
+- **Random State:** 42
+
+### K-Nearest Neighbors
+- **Type:** Instance-based Classifier
+- **Configuration:** n_neighbors=5, weights='uniform', algorithm='auto'
+
+### Naive Bayes
+- **Type:** Gaussian Probabilistic Classifier
+- **Configuration:** var_smoothing=1e-9
+
+### Random Forest
+- **Type:** Ensemble (Bagging)
+- **Configuration:** n_estimators=100, criterion='gini'
+- **Random State:** 42
+
+### XGBoost
+- **Type:** Ensemble (Gradient Boosting)
+- **Configuration:** n_estimators=100, learning_rate=0.1, max_depth=3
+- **Random State:** 42
+
+\newpage
+
+## Technical Architecture
+
+### Code Organization:
 ```
-streamlit>=1.28.0
-scikit-learn>=1.3.0
-numpy>=1.24.0,<2.0.0
-pandas>=2.0.0
-matplotlib>=3.9.0
-seaborn>=0.12.0
-scipy>=1.10.0
+project/
+├── com/abhi/ml/src/
+│   ├── config/settings.py          # Configuration
+│   ├── data/
+│   │   ├── loader.py               # Data loading
+│   │   └── preprocessor.py         # Scaling
+│   ├── models/
+│   │   ├── base_model.py           # Abstract base
+│   │   ├── logistic_model.py       # 6 model files
+│   │   └── ...
+│   ├── evaluation/metrics.py       # Metrics calculation
+│   ├── utils/
+│   │   ├── logger.py               # Logging
+│   │   └── file_handler.py         # File I/O
+│   └── main.py                     # Training pipeline
+├── resources/
+│   ├── data/test_data.csv          # Test dataset
+│   └── models/*.pkl                # Trained models
+├── app.py                          # Streamlit app
+├── requirements.txt                # Dependencies
+└── README.md                       # Documentation
 ```
+
+### Design Patterns:
+- Abstract Base Class pattern for models
+- Strategy pattern for interchangeable algorithms
+- Factory pattern for model creation
+- Separation of concerns across layers
+
+\newpage
+
+## Installation & Usage
+
+### Setup:
+```bash
+git clone https://github.com/abhe9v/2025aa05325_ml_ass2
+cd 2025aa05325_ml_ass2
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Train Models:
+```bash
+python -m com.abhi.ml.src.main
+```
+
+### Run Streamlit App:
+```bash
+streamlit run app.py
+```
+
+\newpage
+
+## Submission Checklist
+
+### GitHub Repository:
+- ✓ Complete source code uploaded
+- ✓ requirements.txt included
+- ✓ Clear README.md added
+- ✓ All 6 models implemented
+- ✓ Model files (.pkl) committed
+
+### Streamlit Application:
+- ✓ Dataset upload option (CSV)
+- ✓ Model selection dropdown
+- ✓ Evaluation metrics display
+- ✓ Confusion matrix visualization
+- ✓ Classification report
+- ✓ Deployed on Streamlit Community Cloud
+- ✓ App opens without errors
+
+### BITS Virtual Lab:
+- ✓ Assignment executed on BITS Virtual Lab
+- ✓ Screenshot captured and included
+
+### Academic Integrity:
+- ✓ Original code with commit history
+- ✓ Customized implementation
+- ✓ No plagiarism
+
+\newpage
+
+## Conclusion
+
+This assignment successfully demonstrates the complete machine learning workflow:
+
+1. **Data Processing:** Loaded and preprocessed Breast Cancer dataset with 569 samples and 30 features
+2. **Model Training:** Implemented 6 classification algorithms with proper configuration
+3. **Evaluation:** Calculated 6 metrics for comprehensive performance analysis
+4. **Best Results:** Achieved 98.25% accuracy with Logistic Regression
+5. **Web Application:** Built interactive Streamlit UI for real-time predictions
+6. **Deployment:** Successfully deployed on Streamlit Community Cloud
+7. **Production Ready:** Professional code structure with documentation
+
+The framework is flexible, well-documented, and ready for real-world applications.
+
 ---
 
 **Submitted By:**  
 Student ID: 2025aa05325  
 Name: Gaikwad Abhinav Rajaram  
-Course: Machine Learning
+BITS Pilani M.Tech (AIML/DSE)  
 Date: February 15, 2026
